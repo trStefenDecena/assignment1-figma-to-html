@@ -1,0 +1,597 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Import Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*
+   ====HEADER STARTS HERE====
+*/
+
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 100px;
+}
+
+.header .logo {
+    /* background: cyan; */
+    text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0px 15px 0px 0px;
+}
+
+.logo img {
+    border-radius: 8px;
+    width: 160px;
+    height: auto;
+}
+
+.header .navigation {
+    /* background: purple; */
+    display: grid;
+    grid-template-columns: 3fr repeat(6, 2fr) 3fr;
+    grid-gap: 5px;
+
+}
+
+.header .navigation div {
+    /* background: hotpink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navtext {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+}
+#home {
+    color: #006D77;
+}
+.header .get-started {
+    /* background: lightcoral; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.header .get-started .get-started-button {
+    margin: 30px 60px 30px 5px;
+    background: #bee1e6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+.header .get-started .burger-menu {
+    /* background: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.burger-menu img {
+    width: 30px;
+    height: auto;
+}
+
+
+/*
+    ====BANNER STARTS HERE====
+*/
+
+.banner {
+    background: #bee1e6;
+    height: 532px;
+
+    display: grid;
+    grid-template-rows: 1fr 6fr 1fr;
+
+}
+
+/* Most of the banner content is at row-2 */
+.banner .row-2 {
+    /* background-color: burlywood; */
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 1fr;
+    grid-gap: 5px;
+}
+
+.banner .row-2 .banner-content {
+    display: grid;
+    grid-template-areas: 
+        "db db . . . . ."
+        "tl tl tl tl tl tl tl"
+        "st st st st st st st"
+        "gsb gsb hw hw . . .";
+    grid-auto-columns: minmax(0, 1fr);
+    
+}
+
+#digital-brand {
+    grid-area: db;
+    background: #006d77;
+    color: white;
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 13px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
+}
+#tagline {
+    grid-area: tl;
+    /* background: red; */
+
+    font-family: 'Roboto';
+    font-size: 53px;
+    font-weight: 600;
+}
+#subtext {
+    grid-area: st;
+
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 16px;
+    
+}
+#get-started-banner {
+    grid-area: gsb;
+    background: black;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 14px;
+
+    border-radius: 8px;
+    padding: 10px 0;
+    margin-right: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+#how-it-works {
+    grid-area: hw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 14px;
+
+    padding: 10px 0;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+    border: 1px solid #006D77;
+    border-radius: 8px
+}
+
+.banner .row-2 .banner-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .row-2 .banner-image img {
+    width: 340px;
+    height: auto;
+}
+
+/*
+    ====SPONSORS START HERE====
+*/
+
+.sponsors {
+    display: grid;
+    grid-template-rows: 100px 100px 75px 100px 100px;
+    grid-template-areas: 
+        "."
+        "row-1"
+        "."
+        "row-2"
+        ".";
+}
+
+
+.sponsors .row-1{
+    /* background: cyan; */
+    grid-area: row-1;
+
+    display: grid;
+    grid-template-columns: 1fr repeat(4, 2fr) 1fr;
+    
+}
+.sponsors .row-2 {
+    /* background: palegreen; */
+    grid-area: row-2;
+
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 3fr) 2fr;
+}
+
+/* Center the sponsor images */
+.sponsors div div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sponsor-img {
+    width: 235px;
+    height: auto;
+}
+
+hr {
+    width: 919px;
+    margin: auto;
+    border: 1px solid #E0E0E0;
+
+}
+
+/*
+    ====TESTIMONIALS START HERE====
+*/
+
+.testimonials {
+    padding-top: 100px;
+    padding-bottom: 75px;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr 4fr 1fr;
+
+}
+
+
+.testimonial-text {
+    display: grid;
+    grid-template-areas: 
+        "db db db . . . . ."
+        "tl tl tl tl tl tl tl tl"
+        "st st st st st st st st"
+        "gd gd gd gd gd gd gd gd"
+        "gd gd gd gd gd gd gd gd"
+        "hr hr hr hr hr hr hr hr"
+        "hr hr hr hr hr hr hr hr"
+        ". . . . . . . .";
+    grid-template-rows: 35px 120px;
+    grid-auto-rows: auto;
+
+    grid-auto-columns: minmax(0, 1fr);
+}
+
+#testimonial-digibrand {
+    grid-area: db;
+    background: #bee1e6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 14px;
+
+    border-radius: 20px;
+    
+}
+#testimonial-tagline {
+    grid-area: tl;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 35px;
+    
+}
+#testimonial-subtext {
+    grid-area: st;
+
+    display: flex;
+    align-items: center;
+
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 16px;
+
+    padding-bottom: 30px;
+    }
+
+#garddy {
+    grid-area: gd;
+
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-rows: 40px auto;
+
+    margin-left: 15px;
+
+}
+#herdric {
+    grid-area: hr;
+
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-rows: 40px auto;
+
+    margin-left: 15px;
+}
+
+.testimonial-name {
+    display: flex;
+    align-items: flex-end;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 18px;
+}
+.testimonial-content {
+    font-family: 'Roboto';
+    font-weight: 300;
+    font-size: 14px;
+
+    margin-right: 25%;
+    line-height: 175%;
+}
+
+#img-garddy, #img-herdric {
+    width: 46px;
+    height: 46px;
+}
+
+/*
+    ====MORE TESTIMONIALS HERE====
+*/
+
+.more-testimonials {
+    display: grid;
+    grid-template-rows: 100px 75px 150px;
+
+    padding: 50px 0;
+}
+
+.test2-tagline {
+    text-align: center;
+
+    margin: 0 28%;
+
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 33px;
+}
+.test2-subtext {
+    text-align: center;
+
+    margin: 0 28%;
+    
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 16px;
+}
+
+.test2-rows {
+    display: flex;
+    justify-content: space-evenly;
+
+    margin: 0 10%;
+    column-gap: 30px;
+
+}
+
+.test2-name {
+    font-family: 'Roboto';  
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.test2-people {
+    display: grid;
+    grid-template-columns: 60px auto;
+    grid-template-rows: 40px auto;
+    
+}
+
+.test2-content {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 150%;
+
+    text-align: justify;
+}
+
+
+/*
+    ====BANNER 2 STARTS HERE====
+*/
+
+.banner2 {
+    background: #e2fbff;
+    display: grid;
+    grid-template-rows: 1fr 8fr 1fr;
+    height: 603px;
+}
+
+.banner2 .row-2 {
+    display: grid;
+    grid-template-columns: 1fr 4fr 3fr 1fr;
+    grid-gap: 20px;
+}
+
+.banner2-content {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr) 2fr;
+}
+
+.content-row-1 {
+    background: #bee1e6;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    margin-right: 75%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-bottom: 30px;
+    border-radius: 16px;
+}
+.content-row-2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 33px;
+    line-height: 39px;
+}
+.content-row-3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.content-row-4 {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 50px;
+}
+
+.banner2-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 25%;
+}
+
+.banner2-img img {
+    width: 500px;
+    height: auto;
+}
+
+/*
+    ====BOTTOM NAV STARTS HERE====
+*/
+
+.bottom-nav {
+    display: grid;
+    grid-template-columns: 2fr repeat(4, 3fr) 2fr;
+    height: 430px;
+
+    grid-gap: 5px;
+}
+
+/* .bottom-nav div { 
+    background: cyan;
+} */
+
+.logo-info {
+    margin: 15% 0;
+}
+
+.logo-info .logo {
+    margin-top: 25%;
+    margin-right: 50px;
+
+}
+
+.logo-info .name {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 18px;
+
+    margin-left: 10px;
+}
+
+.logo-info .content {
+    font-family: 'Roboto';
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 24px;
+
+    margin: 10px 0 10px 10px;
+}
+
+.nav-links {
+    margin: 15% 10% 15% 0;
+    
+} 
+
+#about-us {
+    margin: 20% 10% 15% 15%;
+
+}
+.nav-links .title {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    margin-top: 30%;
+}
+
+.list ul {
+    list-style-image: url('img/list-item.png');
+
+    padding: 20px 0px 0px 20px;
+}
+
+.list ul li {
+    font-family: 'Roboto';
+    font-weight: 600;
+    font-size: 15px;
+
+    color: #929292;
+
+    padding: 5px;
+}
+
+/*
+    ====FOOTER STARTS HERE====
+*/
+.footer {
+    background: #006d77;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    
+    color: #e5f0f1;
+}
